@@ -1,0 +1,13 @@
+export async function GET() {
+    return  Response.json(
+    [
+        {title:"Array"},
+        {title:"Linked List"}
+
+    ]
+)
+}
+export async function POST() {
+    return new Response("Post success")
+    
+}
