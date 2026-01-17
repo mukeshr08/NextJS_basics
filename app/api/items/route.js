@@ -9,8 +9,8 @@ export async function GET(req) {
     ]
 )
 }
-export async function POST(req) {
-    const postitem=req.json()
+export async function POST (req) {
+    const postitem= await req.json()
     console.log(postitem)
     return new Response("Post success")
     
@@ -23,6 +23,13 @@ export async function PUT() {
     )
 
     
+}
+export async function PATCH(req) {
+    return Response.json(
+        [
+            {title:"patch completed"}
+        ]
+    )
 }
 export async function DELETE(){
     return Response.json(
